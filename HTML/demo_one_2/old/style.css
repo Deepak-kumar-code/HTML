@@ -1,0 +1,289 @@
+/*
+Theme Name:Rockford
+Theme URI:https://www.aroham.com/
+Author:Aroham Technologies Pvt. Ltd.
+Author URI:https://www.aroham.com/
+Description:Rockford.
+version:1.0
+*/
+/*****Menu.css*****/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.fa{font-family:'FontAwesome'}
+body{font-family: 'Montserrat', sans-serif}
+
+#menu{-webkit-transition:all 0.2s ease;-moz-transition:all 0.2s ease;-ms-transition:all 0.2s ease;-o-transition:all 0.2s ease;font-weight:400}
+#menu ul{margin:0;padding:0;list-style:none}
+#menu li{position:relative;display:inline-block;margin:0;border:0;z-index:50;background:none}
+#menu .navsec > ul{display:flex}
+#menu .navsec > ul > li{flex:1 1 100%;text-align:center}
+#menu li a{display:block;transition:all 0.2s;padding:5px 0px}
+#menu ul ul{text-align:left;position:absolute}
+#menu ul ul:hover{text-align:left;opacity:0.98;position:absolute}
+#menu li ul{position:absolute;top:54px;left:1px;display:none;width:225px;height:350px;margin:0;padding:0;z-index:25;background-color:#FFF;border:1px solid #2b1d55;box-sizing:border-box}
+.smallhead #menu li ul{top:45px}
+#menu li.menu-item-has-children:hover > ul.sub-menu, #menu .activeli > ul.sub-menu{display:block;padding:0;height:auto;margin:-1px 0 0 1px;top:100%}
+#menu li.menu-item-has-children:hover > ul.sub-menu li ul.sub-menu{top:0}
+.headthirdcont .navsec{width:100%;display:inline-block}	
+.headthirdcont .navsec ul li.nosub a::after{padding-left:5px;color:#027dcc;font-family:FontAwesome;content:"";top:2px;position:relative}
+#menu .navsec ul.menu li.menu-item-has-children > a::after{padding-left:8px;font-family:FontAwesome;content:"\f0d7";position:relative}
+#menu .navsec ul.menu li.menu-item-has-children li.menu-item-has-children > a::after{content:"\f0da";position:absolute;right:5px}
+#menu li li{width:100%;float:left;padding:0;height:auto;margin:0}
+#menu li li a{height:auto;padding:8px 15px 8px;background:#fff;color:#1e1e1e;width:100%;float:left;border-bottom:1px solid #2b1d55;box-sizing:border-box}
+#menu li li a:hover{color:#2b1d55}
+.smallhead #menu .navsec > ul > li > a{padding:10px 0}
+#menu li li:last-child > a{border-bottom:none}
+#menu li > ul > li.current_page_item > a{background:#333333}
+#menu li ul li ul{display:none}
+#menu li ul li:hover ul{position:absolute;top:-1px;left:222px;display:block;margin:0;padding:0}
+#menu li ul li:hover li{display:block;padding:0;height:auto;margin:0}
+#menu li ul li:hover li a{height:auto}
+#menu li ul li:hover li:last-child a{border-bottom:none}
+#menu li ul li:hover > ul > li.current_page_item > a{background:#333333}
+#menu li > ul{visibility:hidden;-webkit-transition:all 500ms ease;-moz-transition:all 500ms ease;-ms-transition:all 500ms ease;-o-transition:all 500ms ease;transition:all 500ms ease;height:0;-moz-opacity:0.00;opacity:0.00;-ms-overflow-style:none}
+#menu li > ul::-webkit-scrollbar{width:4px}
+#menu li > ul::-webkit-scrollbar-thumb{background:#c4e2f5}
+#menu li > ul::-webkit-scrollbar-thumb:window-inactive{background:#ccc}
+#menu li:hover > ul, #menu .activeli > ul{display:block;visibility:visible;height:auto;-moz-opacity:0.98;opacity:0.98;z-index:30}
+.shiftnav.shiftnav-skin-dark-berry ul.shiftnav-menu ul.sub-menu li.menu-item > .shiftnav-target{line-height:21px;border-bottom:1px solid #e5e5e5}
+.smallmenu{display:flex;align-items:center;float:right;margin:0 0 0 auto}
+.mmenu_icon{float:left}
+a.shiftnav-toggle{color:#000000 !important;padding:1px 5px;box-sizing:border-box;border-radius:5px;font-size:24px;line-height:34px}
+a.shiftnav-toggle .fa{margin-right:0}
+a.shiftnav-toggle:hover{color:#2b1d55 !important}
+
+.pquoteNav{overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+.pquoteNav br{display:none}
+#smenu{position:fixed;width:300px;z-index:9;top:0;bottom:0;left:-305px}
+#smenu.right_menu{left:inherit;right:-305px;box-shadow:2px 0px 8px 0px #000000;-moz-box-shadow:2px 0px 8px 0px #000000;-webkit-box-shadow:2px 0px 8px 0px #000000}
+#smenu.active{display:block;z-index:9999999999}
+#smenu li{width:100%;float:right;padding:0px;margin:0;position:relative}
+#smenu li:last-child{border-bottom:none}
+#smenu li a{font-size:14px;line-height:23px;padding:12px;font-weight:400;display:block}
+#smenu li a:hover{text-decoration:none}
+#smenu li.menu-item-has-children > a{padding-right:50px}
+#smenu .menu-item-has-children:after{content:"\f078";text-align:center;font-family:FontAwesome;font-size:12px;line-height:26px;position:absolute;right:0;top:2px;cursor:pointer;transition:.9s;width:44px;height:42px;padding:8px;box-sizing:border-box}
+#smenu .menu-item-has-children.expanded:after{content:"\f077";transition:.9s}
+#smenu li.current-menu-item,#smenu li.current-menu-parent,#smenu{box-shadow:inset -8px 0px 15px -8px rgba(0,0,0,0.6);-moz-box-shadow:inset -8px 0px 15px -8px rgba(0,0,0,0.6);-webkit-box-shadow:inset -8px 0px 15px -8px rgba(0,0,0,0.6);-o-box-shadow:inset -8px 0px 15px -8px rgba(0,0,0,0.6)}
+#smenu .menu-item-has-children .menu-item-has-children:after{width:35px;height:34px;top:2px;right:5px;padding:4px;box-sizing:border-box}
+#smenu li .sub-menu{width:100%;float:left;margin:0;padding:0;overflow:auto;box-sizing:border-box;display:none}
+#smenu li .sub-menu a{padding:8px 38px 8px 30px}
+#smenu li .sub-menu .sub-menu a{padding-left:40px}
+#smenu, #menu li.menu-item-has-children:hover > ul.sub-menu{background:#f5e5f2}
+#smenu .menu-item-has-children:after{color:#ffffff;background:#b6d5c3}
+#smenu li a{color:#000000;border-bottom:1px solid #e4cfe0}
+#smenu li .sub-menu{background-color:#f5e5f2}
+#smenu li.expanded > a, #smenu li.openli > a, #smenu li.current-menu-item > a, #smenu li.current-menu-ancestor > a{background:#ebdee9;color:#000000}
+#smenu li li.expanded > a, #smenu li li.openli > a, #smenu li li.current-menu-item > a, #smenu li li.current-menu-ancestor > a{background:#ebdee9}
+#smenu li.expanded:after, #smenu li.openli:after, #smenu li.current-menu-item:after, #smenu li.current-menu-ancestor:after{background:#5db184}
+.overflow{overflow:hidden;height:100%;position:fixed}
+.shiftbody{position:relative;float:left;width:100%;z-index:99;background-color:#FFF}
+
+#smenu ul.menu > li > a{font-weight:600}
+#smenu .popup{display:none}
+#menu{background:#2b1d55}
+#menu nav{position:relative;text-align:center;padding:0 75px}
+#menu .navsec > ul{display:inline-block}
+#menu li a{padding:15px 18px;color:#f2f2f2;text-transform:uppercase;transition:background, 0.35s;letter-spacing:1px;text-align:center;font-weight:600}
+#menu li a:hover{color:#ffffff;background:#2b1d55}
+#menu .navsec ul.menu li.menu-item-has-children > a::after,#menu .navsec ul.menu li.menu-item-has-children li.menu-item-has-children > a::after{content:"\f067";font-size:10px;padding-left:5px;vertical-align:middle; font-family:FontAwesome;}
+.smallhead #menu .navsec > ul > li > a{padding:10px}
+#menu li.menu-item-has-children:hover > ul.sub-menu{background:#2b1d55;border:none}
+#menu li li a{padding:10px;color:#000000;background:none;border:none;border-top:1px solid #2b1d55;font-weight:normal;text-transform:unset}
+#menu li li a:hover{color:#ffffff;background:#333333}
+/*******End Menu******/
+/*****Font.css*****/
+
+.fa, .fas{font-weight:normal}
+.top_cont, .navsec > ul > li > a{font-weight:500}
+.dbold{font-weight:900 !important}
+.bold, strong, #sidebar .widget-title{font-weight:600 !important}
+.sbold{font-weight:400 !important}
+.light{font-weight:300 !important}
+.uline{border-bottom: 1px solid #111111;display:inline-block}
+.lftcont{width:49%;float:left;}
+.rgtcont{width:49%;float:right;}
+.rabsimg{position: absolute; right:0;}
+
+.entry-content table.package tr th, .entry-content table.package thead th, #sidebar h2{font-weight:300}
+
+.font45{font-size:45px !important;line-height:55px !important}
+.font40, h1, .heading, .entry-title, .bigs{font-size:40px !important;line-height:50px !important}
+.font38, .big, .transbanner .fa{font-size:38px !important;line-height:46px !important}
+.font35, .subheading.big, .osheading{font-size:35px !important;line-height:45px !important}
+.font34{font-size:34px !important;line-height:44px !important}
+.font33{font-size:33px !important;line-height:43px !important}
+.font32, h2, .bigss, .subheadtitle, .loop-title, .subheading, .page-title, .osheadblue{font-size:32px !important;line-height:40px !important}
+.font31{font-size:31px !important;line-height:41px !important}
+.font30, h3, .ossubheading{font-size:30px !important;line-height:40px !important}
+.font29{font-size:29px !important;line-height:39px !important}
+.font28, h4, .social a, .topcont a, .topcont, .smallhead .topcont a, .smallhead .topcont, .ssubheading{font-size:28px !important;line-height:38px !important}
+.font27{font-size:27px !important;line-height:37px !important}
+.font26{font-size:26px !important;line-height:36px !important}
+.font25{font-size:25px !important;line-height:35px !important}
+.font24, .osconhead, a.shiftnav-toggle, .mmenu_icon .popup i{font-size:24px !important;line-height:34px !important}
+.font22, body, .postbox .title{font-size:22px !important;line-height:32px !important}
+.font20, .title, .headseccont .top_cont span a, .smallhead .headseccont .top_cont .call{font-size:20px !important;line-height:30px !important}
+.font18, .smallhead .headseccont .top_cont span a, .widget-title{font-size:18px !important;line-height:28px !important}
+.font17{font-size:17px !important;line-height:27px !important}
+.font16, #sidebar, .blog_post, .exsmall, .policy, div .wpcf7-response-output, .normal, input[type=text], input[type=search], input[type=email], input[type=tel], .wpcf7 input[type="url"], .wpcf7 input[type="date"], textarea, select, .button, .top_cont{font-size:16px !important;line-height:26px !important}
+.font15, .transbanner .small, .footerbox{font-size:15px !important;line-height:25px !important}
+.font14, #menu li a, .copywrite{font-size:14px !important;line-height:24px !important}
+.font12, .exxsmall, .small, label.error, #respond .form-allowed-tags, #respond .form-allowed-tags code, .transbanner div.wpcf7-response-output, .top_cont .button, span.wpcf7-not-valid-tip{font-size:12px !important;line-height:22px !important}
+
+@media screen and (max-width:991px){
+	.font45{font-size:40px !important;line-height:50px !important}
+	.font40, h1, .heading, .entry-title, .bigs{font-size:38px !important;line-height:48px !important}
+	.font38, .big, .transbanner .fa{font-size:35px !important;line-height:45px !important}
+	.font35, .subheading.big, .osheading{font-size:32px !important;line-height:42px !important}
+	.font32, h2, .bigss, .subheadtitle, .loop-title, .subheading, .page-title, .osheadblue{font-size:30px !important;line-height:40px !important}
+	.font30, h3, .ossubheading, .ssubheading{font-size:28px !important;line-height:38px !important}
+	.font28, h4, .social a, .topcont a, .topcont, .smallhead .topcont a, .smallhead .topcont{font-size:26px !important;line-height:36px !important}
+	.font26, body{font-size:24px !important;line-height:34px !important}
+	.font24{font-size:22px !important;line-height:32px !important}
+	.font22{font-size:20px !important;line-height:30px !important}
+	.topcont a, .topcont{font-size:18px !important;line-height:28px !important}
+}
+@media screen and (max-width:767px){	
+	.font45{font-size:35px !important;line-height:45px !important}
+	.font38, .big, .transbanner .fa{font-size:32px !important;line-height:42px !important}
+	.font40, h1, .heading, .entry-title, .bigs{font-size:34px !important;line-height:44px !important}
+	.font35, .subheading.big, .osheading{font-size:30px !important;line-height:40px !important}
+	.font32, h2, .bigss, .subheadtitle, .loop-title, .subheading, .page-title, .osheadblue{font-size:28px !important;line-height:38px !important}
+	.font30, h3, .ossubheading, .ssubheading{font-size:26px !important;line-height:36px !important}
+	.font28, h4, .social a, .topcont a, .topcont, .smallhead .topcont a, .smallhead .topcont{font-size:25px !important;line-height:35px !important}
+	.font26, body{font-size:23px !important;line-height:33px !important}
+	.font25{font-size:22px !important;line-height:32px !important}
+	.font24{font-size:20px !important;line-height:30px !important}
+	.font22, .headseccont .top_cont a, .font20, .title, .smallhead .headseccont .top_cont a, .smallhead .headseccont .top_cont .call, .postbox .title{font-size:18px !important;line-height:28px !important}
+	.smallhead .headseccont .top_cont a{font-size:17px !important;line-height:20px !important}
+	.font17{font-size:16px !important;line-height:26px !important}
+}
+@media screen and (max-width:650px){
+	.font45{font-size:32px !important;line-height:42px !important}
+	.font40, h1, .heading, .entry-title, .bigs{font-size:30px !important;line-height:40px !important}
+	.font38, .big, .transbanner .fa{font-size:28px !important;line-height:38px !important}
+	.font35, .subheading.big, .osheading{font-size:26px !important;line-height:36px !important}
+	.font32, h2, .bigss, .subheadtitle, .loop-title, .subheading, .page-title, .osheadblue{font-size:26px !important;line-height:36px !important}
+	.font30, h3, .ossubheading, .ssubheading{font-size:24px !important;line-height:34px !important}
+	.font28, h4, .social a, .topcont a, .topcont, .smallhead .topcont a, .smallhead .topcont{font-size:24px !important;line-height:34px !important}	
+	.font26{font-size:22px !important;line-height:32px !important}
+	.font25, body{font-size:20px !important;line-height:30px !important}
+	.font24{font-size:18px !important;line-height:28px !important}
+	.topcont a, .topcont{font-size:18px !important;line-height:28px !important}
+	.headseccont .top_cont a, .smallhead .headseccont .top_cont a, .headseccont .top_cont .call, .smallhead .headseccont .top_cont .call{font-size:17px !important;line-height:17px !important}
+	.headseccont .top_cont p{font-size:14px !important;line-height:18px !important;padding:0}
+}
+@media screen and (max-width:420px){
+	.font45{font-size:30px !important;line-height:40px !important}
+	.font38, .big, .transbanner .fa{font-size:28px !important;line-height:38px !important}
+	.headfirstcont ul li{font-size:15px !important;line-height:25px !important}
+	.font16, body, .exsmall, .policy, div .wpcf7-response-output, span.wpcf7-not-valid-tip, .normal, input[type=text], input[type=search], input[type=email], input[type=tel], .wpcf7 input[type="url"], .wpcf7 input[type="date"], textarea, select, .copywrite, .exsmall, .policy, div .wpcf7-response-output, span.wpcf7-not-valid-tip{font-size:14px !important;line-height:24px !important}
+}
+/*****Font End*****/
+/****Common.css****/
+html{-webkit-text-size-adjust:100%;-webkit-overflow-scrolling:touch}
+body{margin:0 auto;padding:0;color:#000000;background:#fff;-webkit-font-smoothing:antialiased;overflow-X:hidden;letter-spacing:0.5px;word-wrap:break-word}
+::selection{color:#fff;background:#748085; /* WebKit/Blink Browsers */}
+::-moz-selection{color:#fff;background:#748085;/* Gecko Browsers */}
+::-webkit-input-placeholder{color:#748085}
+:-moz-placeholder{/* Firefox 18- */color:#748085; }
+::-moz-placeholder{ /* Firefox 19+ */color:#748085}
+:-ms-input-placeholder{color:#748085}
+::-webkit-scrollbar-thumb{background:#2b1d55}
+::-webkit-scrollbar-thumb:window-inactive{background:#ccc}
+img{max-width:100%;border:none}
+.more{color:#4ba04b}
+a{color:#ed1c24 ;transition:all 0.2s;border:none;cursor:pointer;text-decoration:none}
+a:hover, .more:hover, a:focus, a:active{color:#000000;text-decoration:none}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover{text-decoration:none}
+h1{font-size:34px;line-height:38px}
+h2{font-size:30px;line-height:36px}
+h3{font-size:24px;line-height:30px}
+h4{font-size:20px;line-height:26px}
+ul li{padding:0}
+ol, .hentry ol{margin:5px 0 20px 0;list-style:decimal;padding-left:22px}
+ol li{padding:1px 0 1px 0}
+hr{clear:both;height:1px;line-height:1px;border:0;background:#ccc;margin:15px 0}
+ul.sequre{list-style:square}
+ol ol{list-style:upper-alpha}
+ol ol ol{list-style:lower-roman}
+ol ol ol ol{list-style:lower-alpha}
+ul ul, ol ol, ul ol, ol ul{margin-bottom:0}
+dl{margin:15px 0}
+dt{font-weight:bold}
+dd{margin:1.7em 0}
+strong{font-weight:bold}
+cite, em, i{font-style:italic}
+blockquote{font-style:italic;margin:0 0 1.5em;clear:both;}
+pre{padding:15px 0}
+abbr, acronym{border-bottom:1px dotted #666;cursor:help}
+ins{background:#fff9c0;text-decoration:none}
+sup, sub{font-size:11px;height:0;line-height:1;position:relative;vertical-align:baseline}
+sup{bottom:1ex}
+sub{top:.5ex}
+.nopr{padding-right:0 !important}
+.nopl{padding-left:0 !important}
+.nopad{padding:0 !important}
+
+#wrapper{width:100%;box-sizing:border-box}
+.full{width:100%;float:left;position:relative;clear:both;}
+div.first{margin-left:0}
+.center{text-align:center !important}
+.centerdiv{float:none;margin:0 auto}
+
+h1, h2, h3, h4, h5, .heading, .subheading{float:left;width:100%;position:relative;margin:10px 0 25px}
+h3, h4, h5{margin:8px 0 !important}
+
+
+.button, .yellow_btn{background-color:#2b1d55;border:none;color:#fff;display:inline-block;cursor:pointer;float:none;-webkit-appearance:none;padding:15px 35px;width:auto;text-align:center;border-radius:4px;line-height:24px !important;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none;text-transform:uppercase;letter-spacing:1px}
+.button a, .yellow_btn a{color:#ffffff}
+.button:hover{text-decoration:none;background-color:#666666}
+a.button:hover, a.button:focus, a.button:active, a.yellow_btn:hover, a.yellow_btn:focus, a.yellow_btn:active{color:#ffffff}
+
+.alignleft{float:left !important;text-align:left !important}
+.alignright{float:right !important;text-align:right !important}
+.aligncenter{display:inline;text-align:center !important}
+
+
+ul, ol{margin:0;padding:0;list-style:none}
+input[type=text] ,input[type=search] , input[type=email], input[type=tel], .wpcf7 input[type="url"], .wpcf7 input[type="date"], textarea, select{padding:0 2% 0 2%;background:#fff;border:1px solid #c2c2c2;transition:all 0.2s;width:100%;margin-bottom:10px;height:42px;box-sizing:border-box;outline:none}
+input[type=text].wpcf7-captchar{height:32px;line-height:32px}
+select{width:98%;max-width:100%}
+textarea{min-height:105px}
+
+table{width:100%;margin:25px 0}
+.box20{padding:28px;box-sizing:border-box}
+.boxpad, .boxeqlm, .boxeql, .boxeqls{padding:50px 0}
+.boxeql20{padding:20px 0}
+.boxeql15{padding:15px 0}
+.padeql5{padding:5px 0}
+.padeql15{padding-top:15px !important;padding-bottom:15px !important}
+.padbot15{padding-bottom:15px !important}
+.padtop15{padding-top:15px !important}
+.padeql30{padding-top:30px !important;padding-bottom:30px !important}
+.padbot30{padding-bottom:30px !important}
+.padtop30{padding-top:30px !important}
+.padeql{padding-top:50px !important;padding-bottom:50px !important}
+.padbot{padding-bottom:50px !important}
+.padtop{padding-top:50px !important}
+.nopadbot{padding-bottom:0 !important}
+.nopadtop{padding-top:0 !important}
+.nopad{padding:0 !important;}
+.mrgbot15{margin-bottom:15px !important}
+.mrgtop15{margin-top:15px !important}
+.mrgeql15{margin-top:15px !important;margin-bottom:15px !important}
+.mrgbot30{margin-bottom:30px !important}
+.mrgtop30{margin-top:30px !important}
+.mrgeql30{margin-top:30px !important;margin-bottom:30px !important}
+.mrgbot{margin-bottom:50px !important}
+.mrgtop{margin-top:50px !important}
+.mrgeql{margin-top:50px !important;margin-bottom:50px !important}
+.nomrgtop{margin-top:0 !important}
+.nomrgbot{margin-bottom:0 !important}
+.nomrg{margin-top:0 !important;margin-bottom:0 !important}
+
+
+header{width:100%;float:left;position:relative}
+.main_menu{width:100%;float:left;position:relative;background:#2b1d55}
